@@ -17,6 +17,7 @@ namespace Snake
             this.width = width;
             this.height = height;
             this.snake = snake;
+            this.sym = sym;
         }
 
         public Point Create()

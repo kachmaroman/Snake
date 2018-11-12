@@ -33,6 +33,7 @@ namespace Snake
 
                 if (snake.Eat(food))
                 {
+                    food.Sym = tail.Sym;
                     food = foodCreator.Create();
                     food.Draw();
                 }
