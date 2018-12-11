@@ -39,12 +39,12 @@ namespace Snake
             Draw();
         }
 
-        protected internal bool IsHit(Point point)
+        public bool IsHit(Point point)
         {
             return X == point.X && Y == point.Y;
         }
 
-        protected internal bool IsTail(Point point)
+        public bool IsTail(Point point)
         {
             return X == point.X || Y == point.Y;
         }
