@@ -12,10 +12,32 @@ namespace ThirdLab
 		{
 			Manager manager = new Manager("Alex", "Alexeev", 27, Position.Manager);
 
-			Position operation = Position.Developer | Position.Manager;
+			int age = manager;
+			Position position = (Position)manager;
 
-			Console.WriteLine(000100);
+			Position someValue = Position.Developer | Position.Manager;
+			Position someValue2 = Position.Tester ^ Position.Developer;
+			Position someValue3 = Position.Manager & Position.Tester;
 
+
+			int x = 5, y = 5;
+			int result = 0;
+
+			Add(x, y, out int _);
+			Substract(x, y, ref result);
+
+			object obj = x;
+			int value = (int) obj;
+		}
+
+		private static void Add(int x, int y, out int result)
+		{
+			result = x + y;
+		}
+
+		private static void Substract(int x, int y, ref int result)
+		{
+			result = x * y;
 		}
 	}
 }

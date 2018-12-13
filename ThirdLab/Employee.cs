@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ThirdLab
 {
+	public interface IInfo
+	{
+		string GetInfo();
+	}
+
 	public interface IHuman
 	{
 		string FirstName { get; set; }
@@ -13,13 +18,15 @@ namespace ThirdLab
 		int Age { get; set; }
 	}
 
-	public abstract class Employee : IHuman
+	public abstract class Employee : IHuman, IInfo
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public int Age { get; set; }
 		protected Position Position { get; set; }
 		private decimal Salary { get; set; }
+
+		public abstract string GetInfo();
 	}
 
 	public class Manager : Employee
@@ -28,7 +35,19 @@ namespace ThirdLab
 
 		private InternalClass internalClass;
 
-		public Manager(string firstName, string lastName, int age, Position position)
+		public Manager()
+		{
+			Id = Guid.NewGuid();
+		}
+
+		public Manager(string firstName, string lastName)
+		{
+			Id = Guid.NewGuid();
+			FirstName = firstName;
+			LastName = lastName;
+		}
+
+		public Manager(string firstName, string lastName, int age, Position position) : this(firstName, lastName)
 		{
 			Id = Guid.NewGuid();
 			FirstName = firstName;
@@ -39,16 +58,48 @@ namespace ThirdLab
 			internalClass = new InternalClass();
 		}
 
+		public static implicit operator int(Manager manager)
+		{
+			return manager.Age;
+		}
+
+		public static explicit operator Position(Manager manager)
+		{
+			return manager.Position;
+		}
+
+		public override string GetInfo()
+		{
+			return $"{FirstName} - {LastName} - {Age} - {Position}";
+		}
+
 		protected class InternalClass
 		{
+
+		}
+	}
+
+	public class ProjectManager : Manager
+	{
+		public static Guid Id { get; set; }
+
+		static ProjectManager()
+		{
+			Id = Guid.NewGuid();
+		}
+
+		public ProjectManager(string firstName, string lastName, int age) : base(firstName, lastName, age, Position.PM)
+		{
+			
 		}
 	}
 
 	[Flags]
 	public enum Position
 	{
-		Manager = 1,
+		Manager,
 		Developer,
-		Tester
+		Tester,
+		PM
 	}
 }
