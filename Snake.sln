@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{A7BF94E4-097F-45D2-82BE-92A7FB62942F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondLab", "SecondLab\SecondLab.csproj", "{715DED2A-9CAD-4FC0-A984-D067C872DC2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdLab", "ThirdLab\ThirdLab.csproj", "{AAE44605-D748-4934-BFC3-D41B07D0B4B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A7BF94E4-097F-45D2-82BE-92A7FB62942F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7BF94E4-097F-45D2-82BE-92A7FB62942F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7BF94E4-097F-45D2-82BE-92A7FB62942F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715DED2A-9CAD-4FC0-A984-D067C872DC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715DED2A-9CAD-4FC0-A984-D067C872DC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715DED2A-9CAD-4FC0-A984-D067C872DC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715DED2A-9CAD-4FC0-A984-D067C872DC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE44605-D748-4934-BFC3-D41B07D0B4B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE44605-D748-4934-BFC3-D41B07D0B4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE44605-D748-4934-BFC3-D41B07D0B4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE44605-D748-4934-BFC3-D41B07D0B4B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
