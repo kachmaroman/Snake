@@ -37,21 +37,19 @@ namespace ThirdLab
 
 		public Manager()
 		{
+			internalClass = new InternalClass();
+			internalClass.SomeValue = 20;
 			Id = Guid.NewGuid();
 		}
 
-		public Manager(string firstName, string lastName)
+		public Manager(string firstName, string lastName) : this()
 		{
-			Id = Guid.NewGuid();
 			FirstName = firstName;
 			LastName = lastName;
 		}
 
 		public Manager(string firstName, string lastName, int age, Position position) : this(firstName, lastName)
 		{
-			Id = Guid.NewGuid();
-			FirstName = firstName;
-			LastName = lastName;
 			Age = age;
 			Position = position;
 
@@ -75,7 +73,7 @@ namespace ThirdLab
 
 		protected class InternalClass
 		{
-
+			public int SomeValue { get; set; }
 		}
 	}
 
